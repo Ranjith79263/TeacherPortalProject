@@ -1,0 +1,86 @@
+/* Background like login page */
+.teachers-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Card container */
+.teachers-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Title */
+.teachers-card h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Table */
+.teachers-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Header styling */
+.teachers-table thead {
+  background: #2575fc;
+  color: white;
+}
+
+.teachers-table th,
+.teachers-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Row hover */
+.teachers-table tbody tr:hover {
+  background-color: #f1f5ff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .teachers-table thead {
+    display: none;
+  }
+
+  .teachers-table, .teachers-table tbody, .teachers-table tr, .teachers-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .teachers-table tr {
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .teachers-table td {
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .teachers-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+}
